@@ -1,0 +1,12 @@
+# Swap files.
+.*.swp
+.*.swo
+*~
+
+*.pyc
+*.pyo
+*.so
+*.o
+*.a
+
+test-pcg64
