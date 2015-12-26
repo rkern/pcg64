@@ -9,4 +9,4 @@
 *.o
 *.a
 
-test-pcg64
+test-pcg64-*
