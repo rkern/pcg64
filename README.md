@@ -1,5 +1,7 @@
 # C Implementation of PCG64
 
+* Robert Kern `<robert.kern@gmail.com>`
+
 This is a pure C implementation of the [PCG64](http://www.pcg-random.org/)
 member of the PCG family of pseudorandom number generators. 128-bit arithmetic
 is emulated when a suitable `uint128_t` type is not available. Settable streams
