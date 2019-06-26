@@ -12,12 +12,8 @@ the interest of sharing for others to take on.
 
 ## License
 
-Nominally under the [Apache v2
-license](https://opensource.org/licenses/Apache-2.0) for now as this
-incorporates code from [`pcg-c`](https://github.com/imneme/pcg-c) which is so
-licensed.  However, I will relicense under the
-[MIT license](https://opensource.org/licenses/MIT) as soon as
-[`pcg-c` is](https://github.com/imneme/pcg-c/pull/4).
+Available under either the [Apache v2
+license](https://opensource.org/licenses/Apache-2.0) or [MIT license](https://opensource.org/licenses/MIT).
 
 ## Todo
 
