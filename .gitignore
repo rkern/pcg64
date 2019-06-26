@@ -10,3 +10,5 @@
 *.a
 
 test-pcg64-*
+test-native.txt
+test-emulated.txt

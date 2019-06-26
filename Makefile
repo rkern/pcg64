@@ -29,5 +29,10 @@ pcg64-emulated.o: pcg64.c pcg64.h
 test-pcg64-native: test-pcg64-native.o pcg64-native.o
 test-pcg64-emulated: test-pcg64-emulated.o pcg64-emulated.o
 
+test: test-pcg64-native test-pcg64-emulated
+	./test-pcg64-native > test-native.txt
+	./test-pcg64-emulated > test-emulated.txt
+	diff -u test-native.txt test-emulated.txt
+
 clean:
 	rm -f *.a *.o test-pcg64-native test-pcg64-emulated
