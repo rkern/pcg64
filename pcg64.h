@@ -130,8 +130,11 @@ inline void pcg_setseq_128_srandom_r(pcg_state_setseq_128* rng,
                                      pcg128_t initstate, pcg128_t initseq)
 {
     rng->state = PCG_128BIT_CONSTANT(0ULL, 0ULL);
+    /* Ensure that the increment is odd. */
     rng->inc.high = initseq.high << 1u;
-    rng->inc.high |= initseq.low & 0x800000000000ULL;
+    /* Shift the highest bit from the low word up to the lowest bit of the high
+     * word. */
+    rng->inc.high |= initseq.low >> 63u;
     rng->inc.low = (initseq.low << 1u) | 1u;
     pcg_setseq_128_step_r(rng);
     rng->state = _pcg128_add(rng->state, initstate);

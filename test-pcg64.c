@@ -35,7 +35,8 @@ void print_uint64_hex(uint64_t x)
 int main(int argc, char** argv)
 {
     pcg64_random_t rng;
-    pcg64_srandom_r(&rng, PCG_128BIT_CONSTANT(0ULL, 42ULL), PCG_128BIT_CONSTANT(0ULL, 54ULL));
+    pcg64_srandom_r(&rng, PCG_128BIT_CONSTANT(0ULL, 42ULL),
+	    PCG_128BIT_CONSTANT(0, 0x8000000000000054ULL));
     for (int i=0; i < 100; i++) {
         print_uint64_hex(pcg64_random_r(&rng));
     }
